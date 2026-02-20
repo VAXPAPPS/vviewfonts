@@ -102,4 +102,3 @@ build/linux/x64/release/bundle/vviewfonts
 ## 📜 License
 
 VAXP Organization — Private Project.
-# vviewfonts
