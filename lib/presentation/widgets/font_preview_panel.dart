@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../application/font_preview/font_preview_bloc.dart';
@@ -43,7 +42,7 @@ class FontPreviewPanel extends StatelessWidget {
                         Text(
                           '${font.style} • ${font.weightName} • ${font.fileExtension.toUpperCase()}',
                           style: TextStyle(
-                            color: Colors.white.withOpacity(0.5),
+                            color: Colors.white.withValues(alpha: 0.5),
                             fontSize: 12,
                           ),
                         ),
@@ -57,7 +56,7 @@ class FontPreviewPanel extends StatelessWidget {
                       vertical: 6,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.08),
+                      color: Colors.white.withValues(alpha: 0.08),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
@@ -82,14 +81,14 @@ class FontPreviewPanel extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.text_decrease,
-                    color: Colors.white.withOpacity(0.4),
+                    color: Colors.white.withValues(alpha: 0.4),
                     size: 16,
                   ),
                   Expanded(
                     child: SliderTheme(
                       data: SliderThemeData(
-                        activeTrackColor: Colors.white.withOpacity(0.3),
-                        inactiveTrackColor: Colors.white.withOpacity(0.08),
+                        activeTrackColor: Colors.white.withValues(alpha: 0.3),
+                        inactiveTrackColor: Colors.white.withValues(alpha: 0.08),
                         thumbColor: Colors.white,
                         thumbShape: const RoundSliderThumbShape(
                           enabledThumbRadius: 6,
@@ -113,7 +112,7 @@ class FontPreviewPanel extends StatelessWidget {
                   ),
                   Icon(
                     Icons.text_increase,
-                    color: Colors.white.withOpacity(0.4),
+                    color: Colors.white.withValues(alpha: 0.4),
                     size: 16,
                   ),
                 ],
@@ -127,19 +126,19 @@ class FontPreviewPanel extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.04),
+                  color: Colors.white.withValues(alpha: 0.04),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.white.withOpacity(0.08)),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
                 ),
                 child: TextField(
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha: 0.7),
                     fontSize: 12,
                   ),
                   decoration: InputDecoration(
                     hintText: 'Type custom preview text...',
                     hintStyle: TextStyle(
-                      color: Colors.white.withOpacity(0.2),
+                      color: Colors.white.withValues(alpha: 0.2),
                       fontSize: 12,
                     ),
                     border: InputBorder.none,
@@ -151,7 +150,7 @@ class FontPreviewPanel extends StatelessWidget {
                       padding: const EdgeInsets.only(right: 8),
                       child: Icon(
                         Icons.edit_note,
-                        color: Colors.white.withOpacity(0.3),
+                        color: Colors.white.withValues(alpha: 0.3),
                         size: 16,
                       ),
                     ),
@@ -183,7 +182,7 @@ class FontPreviewPanel extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Container(
                 height: 1,
-                color: Colors.white.withOpacity(0.06),
+                color: Colors.white.withValues(alpha: 0.06),
               ),
             ),
             const SizedBox(height: 16),
@@ -217,13 +216,13 @@ class FontPreviewPanel extends StatelessWidget {
           Icon(
             Icons.font_download_outlined,
             size: 64,
-            color: Colors.white.withOpacity(0.1),
+            color: Colors.white.withValues(alpha: 0.1),
           ),
           const SizedBox(height: 16),
           Text(
             'Select a font to preview',
             style: TextStyle(
-              color: Colors.white.withOpacity(0.3),
+              color: Colors.white.withValues(alpha: 0.3),
               fontSize: 14,
             ),
           ),

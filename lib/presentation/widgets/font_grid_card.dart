@@ -36,17 +36,17 @@ class _FontGridCardState extends State<FontGridCard> {
           duration: const Duration(milliseconds: 200),
           decoration: BoxDecoration(
             color: widget.isSelected
-                ? Colors.white.withOpacity(0.1)
+                ? Colors.white.withValues(alpha: 0.1)
                 : _hovered
-                ? Colors.white.withOpacity(0.06)
-                : Colors.white.withOpacity(0.03),
+                ? Colors.white.withValues(alpha: 0.06)
+                : Colors.white.withValues(alpha: 0.03),
             borderRadius: BorderRadius.circular(14),
             border: Border.all(
               color: widget.isSelected
-                  ? Colors.white.withOpacity(0.2)
+                  ? Colors.white.withValues(alpha: 0.2)
                   : _hovered
-                  ? Colors.white.withOpacity(0.1)
-                  : Colors.white.withOpacity(0.05),
+                  ? Colors.white.withValues(alpha: 0.1)
+                  : Colors.white.withValues(alpha: 0.05),
             ),
           ),
           child: Stack(
@@ -72,7 +72,7 @@ class _FontGridCardState extends State<FontGridCard> {
                     Text(
                       '${widget.font.style} • ${widget.font.category.displayName}',
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.35),
+                        color: Colors.white.withValues(alpha: 0.35),
                         fontSize: 9,
                       ),
                       maxLines: 1,
@@ -86,7 +86,7 @@ class _FontGridCardState extends State<FontGridCard> {
                         style: TextStyle(
                           fontFamily: widget.font.family,
                           fontSize: 24,
-                          color: Colors.white.withOpacity(0.8),
+                          color: Colors.white.withValues(alpha: 0.8),
                         ),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -115,7 +115,7 @@ class _FontGridCardState extends State<FontGridCard> {
                               content: Text('Copied: ${widget.font.family}'),
                               duration: const Duration(seconds: 1),
                               behavior: SnackBarBehavior.floating,
-                              backgroundColor: Colors.white.withOpacity(0.15),
+                              backgroundColor: Colors.white.withValues(alpha: 0.15),
                             ),
                           );
                         },
@@ -177,14 +177,14 @@ class _GridActionState extends State<_GridAction> {
           padding: const EdgeInsets.all(4),
           decoration: BoxDecoration(
             color: _hovered
-                ? Colors.black.withOpacity(0.5)
-                : Colors.black.withOpacity(0.3),
+                ? Colors.black.withValues(alpha: 0.5)
+                : Colors.black.withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(6),
           ),
           child: Icon(
             widget.icon,
             size: 14,
-            color: widget.color ?? Colors.white.withOpacity(0.7),
+            color: widget.color ?? Colors.white.withValues(alpha: 0.7),
           ),
         ),
       ),

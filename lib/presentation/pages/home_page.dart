@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
         SizedBox(width: 300, child: _buildSidebar()),
 
         // Divider
-        Container(width: 1, color: Colors.white.withOpacity(0.06)),
+        Container(width: 1, color: Colors.white.withValues(alpha: 0.06)),
 
         // ==================== MAIN CONTENT ====================
         Expanded(child: _buildMainPanel()),
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                 child: Text(
                   '${state.displayedFonts.length} fonts',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.3),
+                    color: Colors.white.withValues(alpha: 0.3),
                     fontSize: 10,
                     fontWeight: FontWeight.w500,
                   ),
@@ -105,7 +105,7 @@ class _HomePageState extends State<HomePage> {
         ),
 
         // Divider
-        Container(height: 1, color: Colors.white.withOpacity(0.06)),
+        Container(height: 1, color: Colors.white.withValues(alpha: 0.06)),
 
         // Font list
         Expanded(
@@ -129,14 +129,14 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Icon(
                           Icons.error_outline,
-                          color: Colors.red.withOpacity(0.5),
+                          color: Colors.red.withValues(alpha: 0.5),
                           size: 40,
                         ),
                         const SizedBox(height: 12),
                         Text(
                           state.message,
                           style: TextStyle(
-                            color: Colors.white.withOpacity(0.5),
+                            color: Colors.white.withValues(alpha: 0.5),
                             fontSize: 12,
                           ),
                           textAlign: TextAlign.center,
@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage> {
                                 vertical: 8,
                               ),
                               decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.1),
+                                color: Colors.white.withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: const Text(
@@ -181,14 +181,14 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Icon(
                           Icons.search_off,
-                          color: Colors.white.withOpacity(0.15),
+                          color: Colors.white.withValues(alpha: 0.15),
                           size: 40,
                         ),
                         const SizedBox(height: 12),
                         Text(
                           'No fonts found',
                           style: TextStyle(
-                            color: Colors.white.withOpacity(0.3),
+                            color: Colors.white.withValues(alpha: 0.3),
                             fontSize: 13,
                           ),
                         ),
@@ -279,8 +279,9 @@ class _HomePageState extends State<HomePage> {
                 onTap: () => setState(() => _activeTab = 1),
                 badge: BlocBuilder<FontPreviewBloc, FontPreviewState>(
                   builder: (context, state) {
-                    if (state.compareFonts.isEmpty)
+                    if (state.compareFonts.isEmpty) {
                       return const SizedBox.shrink();
+                    }
                     return Container(
                       margin: const EdgeInsets.only(left: 6),
                       padding: const EdgeInsets.symmetric(
@@ -288,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                         vertical: 1,
                       ),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF28C840).withOpacity(0.2),
+                        color: const Color(0xFF28C840).withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Text(
@@ -365,14 +366,14 @@ class _ViewModeToggleState extends State<_ViewModeToggle> {
           padding: const EdgeInsets.all(6),
           decoration: BoxDecoration(
             color: _hovered
-                ? Colors.white.withOpacity(0.1)
-                : Colors.white.withOpacity(0.04),
+                ? Colors.white.withValues(alpha: 0.1)
+                : Colors.white.withValues(alpha: 0.04),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(
             widget.isGrid ? Icons.view_list_rounded : Icons.grid_view_rounded,
             size: 16,
-            color: Colors.white.withOpacity(0.5),
+            color: Colors.white.withValues(alpha: 0.5),
           ),
         ),
       ),
@@ -415,9 +416,9 @@ class _TabButtonState extends State<_TabButton> {
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
           decoration: BoxDecoration(
             color: widget.isActive
-                ? Colors.white.withOpacity(0.1)
+                ? Colors.white.withValues(alpha: 0.1)
                 : _hovered
-                ? Colors.white.withOpacity(0.05)
+                ? Colors.white.withValues(alpha: 0.05)
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(8),
           ),
@@ -429,7 +430,7 @@ class _TabButtonState extends State<_TabButton> {
                 size: 14,
                 color: widget.isActive
                     ? Colors.white
-                    : Colors.white.withOpacity(0.4),
+                    : Colors.white.withValues(alpha: 0.4),
               ),
               const SizedBox(width: 6),
               Text(
@@ -437,7 +438,7 @@ class _TabButtonState extends State<_TabButton> {
                 style: TextStyle(
                   color: widget.isActive
                       ? Colors.white
-                      : Colors.white.withOpacity(0.4),
+                      : Colors.white.withValues(alpha: 0.4),
                   fontSize: 12,
                   fontWeight: widget.isActive
                       ? FontWeight.w600

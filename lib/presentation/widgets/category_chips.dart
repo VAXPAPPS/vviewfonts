@@ -85,15 +85,15 @@ class _CategoryChipState extends State<_CategoryChip> {
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
           decoration: BoxDecoration(
             color: widget.isActive
-                ? Colors.white.withOpacity(0.15)
+                ? Colors.white.withValues(alpha: 0.15)
                 : _hovered
-                ? Colors.white.withOpacity(0.08)
+                ? Colors.white.withValues(alpha: 0.08)
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: widget.isActive
-                  ? Colors.white.withOpacity(0.3)
-                  : Colors.white.withOpacity(0.1),
+                  ? Colors.white.withValues(alpha: 0.3)
+                  : Colors.white.withValues(alpha: 0.1),
             ),
           ),
           child: Text(
@@ -103,7 +103,7 @@ class _CategoryChipState extends State<_CategoryChip> {
               fontWeight: widget.isActive ? FontWeight.w600 : FontWeight.w400,
               color: widget.isActive
                   ? Colors.white
-                  : Colors.white.withOpacity(0.6),
+                  : Colors.white.withValues(alpha: 0.6),
             ),
           ),
         ),

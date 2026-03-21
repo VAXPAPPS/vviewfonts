@@ -39,13 +39,13 @@ class _FontListTileState extends State<FontListTile> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           decoration: BoxDecoration(
             color: widget.isSelected
-                ? Colors.white.withOpacity(0.12)
+                ? Colors.white.withValues(alpha: 0.12)
                 : _hovered
-                ? Colors.white.withOpacity(0.06)
+                ? Colors.white.withValues(alpha: 0.06)
                 : Colors.transparent,
             borderRadius: BorderRadius.circular(10),
             border: widget.isSelected
-                ? Border.all(color: Colors.white.withOpacity(0.15))
+                ? Border.all(color: Colors.white.withValues(alpha: 0.15))
                 : null,
           ),
           child: Row(
@@ -69,7 +69,7 @@ class _FontListTileState extends State<FontListTile> {
                     Text(
                       '${widget.font.style} • ${widget.font.category.displayName}',
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.4),
+                        color: Colors.white.withValues(alpha: 0.4),
                         fontSize: 10,
                       ),
                       maxLines: 1,
@@ -99,7 +99,7 @@ class _FontListTileState extends State<FontListTile> {
                             content: Text('Copied: ${widget.font.family}'),
                             duration: const Duration(seconds: 1),
                             behavior: SnackBarBehavior.floating,
-                            backgroundColor: Colors.white.withOpacity(0.15),
+                            backgroundColor: Colors.white.withValues(alpha: 0.15),
                           ),
                         );
                       },
@@ -201,14 +201,14 @@ class _ActionIconState extends State<_ActionIcon> {
             padding: const EdgeInsets.all(4),
             decoration: BoxDecoration(
               color: _hovered
-                  ? Colors.white.withOpacity(0.1)
+                  ? Colors.white.withValues(alpha: 0.1)
                   : Colors.transparent,
               borderRadius: BorderRadius.circular(6),
             ),
             child: Icon(
               widget.icon,
               size: 14,
-              color: widget.color ?? Colors.white.withOpacity(0.5),
+              color: widget.color ?? Colors.white.withValues(alpha: 0.5),
             ),
           ),
         ),

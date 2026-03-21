@@ -46,12 +46,12 @@ class _FontSearchBarState extends State<FontSearchBar> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(_isFocused ? 0.12 : 0.06),
+          color: Colors.white.withValues(alpha: _isFocused ? 0.12 : 0.06),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: _isFocused
-                ? Colors.white.withOpacity(0.3)
-                : Colors.white.withOpacity(0.08),
+                ? Colors.white.withValues(alpha: 0.3)
+                : Colors.white.withValues(alpha: 0.08),
           ),
         ),
         child: TextField(
@@ -61,19 +61,19 @@ class _FontSearchBarState extends State<FontSearchBar> {
           decoration: InputDecoration(
             hintText: 'Search fonts...',
             hintStyle: TextStyle(
-              color: Colors.white.withOpacity(0.3),
+              color: Colors.white.withValues(alpha: 0.3),
               fontSize: 13,
             ),
             prefixIcon: Icon(
               Icons.search,
-              color: Colors.white.withOpacity(0.4),
+              color: Colors.white.withValues(alpha: 0.4),
               size: 18,
             ),
             suffixIcon: _controller.text.isNotEmpty
                 ? IconButton(
                     icon: Icon(
                       Icons.close,
-                      color: Colors.white.withOpacity(0.4),
+                      color: Colors.white.withValues(alpha: 0.4),
                       size: 16,
                     ),
                     onPressed: () {
