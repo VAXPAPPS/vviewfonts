@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=vviewfonts
+Comment=Flutter Application - vviewfonts
+Exec=/usr/bin/vviewfonts
+Icon=/usr/share/icons/hicolor/256x256/apps/vviewfonts.png
+Terminal=false
+Categories=Utility;Development;
